@@ -1,0 +1,31 @@
+<html lang="en">
+
+
+<head>
+    
+    <meta charset="UTF-8">
+ 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Calc Sum&Avg num</title>
+  
+    <script>
+        var count = Number(prompt("How many numbers do you have? "));
+        var sum = 0, avg = 0;
+        for (var i = 0; i < count; i++) {
+            sum = sum + Number(prompt("Enter Number " + (i + 1)));
+        }
+        avg = sum / count;
+        alert("sum=" + sum);
+        alert("avg=" + avg);
+    </script>
+    
+</head>
+
+
+<body>
+
+    </body>
+
+</html>

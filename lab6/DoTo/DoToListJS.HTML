@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="DoToListJS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+<section class="container">
+        <h1 class="titelPage">Employee List</h1>
+        <div class="form-group">
+            <label>Employee name</label>
+            <input id ="nameEmp" class="form-control" /> 
+        </div>
+
+        <div class="form-group">
+            <label>Employee age</label>
+            <input id ="ageEmp" class="form-control" /> 
+        </div>
+
+        <div class="form-group">
+            <label>Employee salary</label>
+            <input id ="salaryEmp" class="form-control" /> 
+        </div>
+
+        <div class="form-group">
+            <label>Employee gender</label>
+            <input id ="genderEmp" class="form-control" /> 
+        </div>
+
+        <button id="submitBtn" onclick="clickAction()" type="button" class="btn btn-success mb-3 mt-3 float-right">Add Employee</button>
+        <div class="clearfix"></div>
+        <div class="searchDiv mb-4">
+            <input id ="searchInput " onkeyup= "search(this.value)" class="form-control" placeholder="if you need to search for a certain item of data" /> 
+        </div>
+    </section>
+    <div>
+        <table >
+            <thead>
+                <th>Name</th>
+                <th>age</th>
+                <th>Salary</th>
+                <th>gender</th>
+                <th> </th>
+                <th> </th>
+            </thead>
+            <tbody id="tableBody">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="DoToListJS.js"></script>
+    </body>
+    </html>

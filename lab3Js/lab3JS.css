@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(26, 25, 25);
+}
+.parent{
+    background-color: rgb(151, 75, 75);
+    width: 300px;
+    padding: 50px 0px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+div ul li{
+    display: inline-block;
+    background-color: rgb(234 234 234);
+    width: 50px ;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    border-style: solid;
+    border-color: rgb(85, 79, 79);
+    border-width: 1px;
+    font-weight: 900;
+}
+header div{
+    width: 212px ;
+    height: 60px;
+    margin-left: 40px;
+    background-color: #ffffff;
+    border-bottom-style: solid ;
+    border-width: 1px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

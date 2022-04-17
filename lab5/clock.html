@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="startTime()">
+
+  <div class="upperHalf">
+    <div class="white">
+      <div id="clock"></div>
+    </div>
+    <div class="dclocktxt">Digital clock</div>
+  </div>
+
+  <div class="lowerHalf">
+    <div class="alarmBox">
+      <h2>SET ALARM AFTER</h2>
+      <h4 >HOURS</h4>
+      <input type="text" id="hours">
+      <h4 >MINUTES</h4>
+      <input type="text" id="minutes">
+      <h4 >SECONDS</h4>
+     <input type="text" id="seconds">
+
+     <div>
+      <button id="set" onclick="setClicked()">Set</button>
+      <button id="clear" onclick="clearClicked()" >Clear</button>
+     </div>
+    </div>
+    
+    
+  </div>
+</body>
+
+
+
+
+<style>
+
+  .upperHalf
+  {
+    background-color: rgb(227, 225, 231);
+    height: 500px;
+  }
+
+  .lowerHalf
+  {
+    background-color: rgb(170, 169, 169);
+    height: 500px;
+  }
+  .alarmBox
+  {
+    text-align: center;
+    background-color: whitesmoke;
+    min-height: 60px;
+    padding-bottom: 40px;
+    width:50% ;
+    transform: translate(50%,50%);
+   padding-bottom: 10px;
+   
+  }
+  #clock
+  {
+    font-size: 60px;
+    font-family: fantasy;
+    text-align: center;
+    transform: translate(0%,50%);
+    background-color: rgb(228, 222, 222);
+    width: 300px;
+    
+  }
+  .white
+  {
+   
+    height: 150px;
+    width:300px ;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    text-align: center;
+    background-color: whitesmoke;
+    min-height: 60px;
+    transform: translate(75%,50%);
+   padding-bottom: 10px;
+
+    
+    
+  }
+  .dclocktxt
+  {
+    font-family:cursive;
+    margin-top: 180px;
+    text-align: center;
+    font-size: 20px;
+  }
+</style>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h=today.getHours() ;
+  if(h>12){h=h-12;}
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+var clicked=false;
+function setClicked()
+{
+ 
+  var AlarmH=Number(document.getElementById("hours").value);
+  var AlarmM=Number(document.getElementById("minutes").value);
+  var AlarmS=Number(document.getElementById("seconds").value);
+  const today = new Date();
+  let h=today.getHours() ;
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  if(h>12){h=h-12};
+  if(clicked)
+  {
+    AlarmH=AlarmM=AlarmS=null;
+    clicked=false;
+  }
+
+  if(AlarmH == h && AlarmM==m && AlarmS==s)
+  {
+    alert("alarm sound")
+  }
+  setTimeout(setClicked, 1000);
+}
+
+function clearClicked()
+{
+  document.getElementById("hours").value=""
+  document.getElementById("minutes").value=""
+  document.getElementById("seconds").value=""
+  clicked=true;
+
+}
+
+</script>
+
+</body>
+</html>

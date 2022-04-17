@@ -1,0 +1,23 @@
+.titelPage{
+    text-align: center;
+    color: red;
+    font-weight: 900;
+}
+table{
+    width: 700px ;
+    background-color: rgb(226, 231, 227);
+    margin: 10px 25%;
+
+}
+table thead {
+    padding-left: 60px; 
+    border-bottom-style: solid ;
+    
+    
+}
+
+#tableBody tr{
+    border-bottom-style: solid ;
+    font-weight: 600;
+    color: rgb(101 113 164);
+}

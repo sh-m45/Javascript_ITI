@@ -1,0 +1,30 @@
+.parent{
+    background-color: rgb(6, 6, 116);
+    width: 700px ;
+    height: 300px ;
+    padding: 20px 0px ;
+    text-align: center;
+    margin: 10px 25%;
+}
+input{
+    width: 80%;
+}
+label{
+    color: white ;
+    font-weight: 600;
+    padding-right: 20px;
+}
+button{
+    width: 100px;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 700;
+    background-color: rgb(176 176 176);
+    border-color: rgb(176 176 176);
+} 
+
+#pAlert {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+}
